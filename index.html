@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>10초 밥먹기 탭 게임 - 이미지 Ver.</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="game-container">
+        <!-- Loading Screen -->
+        <div id="screen-loading" class="screen">
+            <img src="babsim_img1.jpg" alt="로딩 화면">
+        </div>
+
+        <!-- Guide Screen -->
+        <div id="screen-guide" class="screen hidden">
+            <img src="babsim_img2.jpg" alt="안내 화면">
+            <!-- 투명한 시작 버튼 영역 -->
+            <div id="start-hotspot" class="red-btn-hotspot"></div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="screen-game" class="screen hidden">
+            <!-- Game Images (Crossfading) -->
+            <img src="img3_fixed.png" id="game-bg-10" class="game-bg active-bg" alt="게임 10초">
+            <img src="img4_fixed.png" id="game-bg-8" class="game-bg" alt="게임 8초">
+            <img src="img5_fixed.png" id="game-bg-5" class="game-bg" alt="게임 5초">
+            <img src="img6_fixed.png" id="game-bg-1" class="game-bg" alt="게임 1초">
+
+            <!-- Timer -->
+            <div id="timer">10.0</div>
+
+            <!-- Tap effect layer -->
+            <div id="tap-effects"></div>
+            <div id="touch-layer"></div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="screen-result" class="screen hidden">
+            <img id="result-bg" src="babsim_img7.jpg" alt="결과 화면">
+            <!-- 투명한 다시하기 버튼 영역 -->
+            <div id="restart-hotspot" class="red-btn-hotspot"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
