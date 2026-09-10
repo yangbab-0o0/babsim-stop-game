@@ -90,19 +90,19 @@ function updateTimer() {
 }
 
 function updateBackgroundByScore() {
-    // 점수별 배경 이미지 크로스페이드 트랜지션 (10점 단위)
+    // 점수별 배경 이미지 크로스페이드 트랜지션 (16, 36, 56점 기준으로 변경)
     // 기존 이미지를 지우지 않고 새 이미지를 그 위에 덧씌우는 방식으로 변경하여 어두워지는 현상 방지
-    if (score >= 10 && score < 20) {
+    if (score >= 16 && score < 36) {
         if (!bg8.classList.contains('active-bg')) {
             bg8.classList.add('active-bg');
         }
     }
-    else if (score >= 20 && score < 30) {
+    else if (score >= 36 && score < 56) {
         if (!bg5.classList.contains('active-bg')) {
             bg5.classList.add('active-bg');
         }
     }
-    else if (score >= 30) {
+    else if (score >= 56) {
         if (!bg1.classList.contains('active-bg')) {
             bg1.classList.add('active-bg');
         }
