@@ -91,19 +91,19 @@ function updateTimer() {
 }
 
 function updateBackgroundByScore() {
-    // 점수별 배경 이미지 크로스페이드 트랜지션 (25, 50, 75점 기준)
+    // 점수별 배경 이미지 크로스페이드 트랜지션 (35, 70, 105점 기준)
     // 기존 이미지를 지우지 않고 새 이미지를 그 위에 덧씌우는 방식으로 변경하여 어두워지는 현상 방지
-    if (score >= 25 && score < 50) {
+    if (score >= 35 && score < 70) {
         if (!bg8.classList.contains('active-bg')) {
             bg8.classList.add('active-bg');
         }
     }
-    else if (score >= 50 && score < 75) {
+    else if (score >= 70 && score < 105) {
         if (!bg5.classList.contains('active-bg')) {
             bg5.classList.add('active-bg');
         }
     }
-    else if (score >= 75) {
+    else if (score >= 105) {
         if (!bg1.classList.contains('active-bg')) {
             bg1.classList.add('active-bg');
         }
@@ -162,15 +162,15 @@ function endGame() {
     // 타임오버 화면에서는 다시하기 버튼을 숨김 처리하여 눌리지 않도록 함
     document.getElementById('restart-hotspot').classList.add('hidden');
 
-    // 1.5초 후 점수에 따른 엔딩 이미지 전체화면 적용 (밥 단계 상향에 맞춰 엔딩 기준도 조율)
+    // 1.5초 후 점수에 따른 엔딩 이미지 전체화면 적용 (35/70/105점 단계에 맞춤)
     setTimeout(() => {
-        if (score < 35) {
+        if (score < 45) {
             resultBg.src = 'ending_img1.png';
-        } else if (score < 50) {
-            resultBg.src = 'ending_img2.png';
         } else if (score < 65) {
+            resultBg.src = 'ending_img2.png';
+        } else if (score < 85) {
             resultBg.src = 'ending_img3.png';
-        } else if (score < 80) {
+        } else if (score < 105) {
             resultBg.src = 'ending_img4.png';
         } else {
             resultBg.src = 'ending_img5.png';
