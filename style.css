@@ -143,14 +143,6 @@ body {
     }
 }
 
-border-bottom: 2px dashed #ccc;
-color: #333;
-font-weight: bold;
-}
-
-#score-list li:last-child {
-    border-bottom: none;
-}
 
 .guide-red-btn {
     width: 65%;
